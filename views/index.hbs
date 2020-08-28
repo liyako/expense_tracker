@@ -1,1 +1,51 @@
-<h1>index page</h1>
+<div class="container mt-5">
+  <div class="w-75 mx-auto">
+    <select name="filter" class="form-control"> 
+      <option value="家居物業">家居物業</option>
+      <option value="交通出行">交通出行</option>
+      <option value="休閒娛樂">休閒娛樂</option>
+      <option value="餐飲食品">餐飲食品</option>
+      <option value="其他">其他</option>
+    </select>
+
+    <p>總金額: <span class="h4">100</span></p>
+
+    {{!-- record plane --}}
+    <div class="record-ls row align-items-center">
+      <div class="record col p-1">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-2 pr-0 text-center">
+            <i class="fas fa-utensils kind-icon"></i>
+          </div>
+          <div class="col-auto pl-0">
+            <h5 class="mb-0">午餐</h5>
+            <small>2019/09/17</small>
+          </div>
+          <div class="col-2 ml-auto text-center">$ 60</div>
+        </div>
+      </div>
+      <div class="col-auto ml-auto">
+        <a href="#">修改</a>
+        <a href="#">刪除</a>
+      </div>
+    </div>
+    <div class="record-ls row align-items-center">
+      <div class="record col p-1">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-2 pr-0 text-center">
+            <i class="fas fa-shuttle-van kind-icon"></i>
+          </div>
+          <div class="col-auto pl-0">
+            <h5 class="mb-0">捷運</h5>
+            <small>2019/09/17</small>
+          </div>
+          <div class="col-2 ml-auto text-center">$ 60</div>
+        </div>
+      </div>
+      <div class="col-auto ml-auto">
+        <a href="#">修改</a>
+        <a href="#">刪除</a>
+      </div>
+    </div>
+  </div>
+</div> 
