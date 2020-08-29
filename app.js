@@ -30,6 +30,13 @@ app.use(methodOverride('_method'))
 
 // 呼叫 Passport 函式並傳入 app
 usePassport(app)
+//middleware
+app.use((req, res, next) => {
+  // 你可以在這裡 console.log(req.user) 等資訊來觀察
+  res.locals.isAuthenticated = req.isAuthenticated()
+  res.locals.user = req.user
+  next()
+})
 
 // route setting
 app.use(routes)
