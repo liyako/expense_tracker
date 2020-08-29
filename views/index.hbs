@@ -8,44 +8,37 @@
       <option value="其他">其他</option>
     </select>
 
-    <p>總金額: <span class="h4">100</span></p>
+    <p>總金額: <span class="h4">{{ this.totalAmount }}</span></p>
 
     {{!-- record plane --}}
-    <div class="record-ls row align-items-center">
-      <div class="record col p-1">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-2 pr-0 text-center">
-            <i class="fas fa-utensils kind-icon"></i>
-          </div>
-          <div class="col-auto pl-0">
-            <h5 class="mb-0">午餐</h5>
-            <small>2019/09/17</small>
-          </div>
-          <div class="col-2 ml-auto text-center">$ 60</div>
+<ul class="list-group">
+  {{#each records}}
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-auto mr-auto">
+          <h4 style="display: inline; vertical-align: middle;">
+            {{ this.name }}
+          </h4>
+          <small>{{ this.date }}</small>
+        </div>
+        <div class="col-auto mr-auto">
+            <span>$</span>
+            <span class="amount">{{this.amount}}</span>
+        </div>
+        <div class="col-auto">
+          <a class="btn btn-info" href="./todos/{{ this._id }}/edit">修改</a>
+          <form action="./todos/{{ this._id }}?_method=DELETE" method="POST" style="display: inline;">
+            <button class="btn btn-danger" type="submit">刪除</button>
+          </form>
         </div>
       </div>
-      <div class="col-auto ml-auto">
-        <a href="#">修改</a>
-        <a href="#">刪除</a>
-      </div>
-    </div>
-    <div class="record-ls row align-items-center">
-      <div class="record col p-1">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-2 pr-0 text-center">
-            <i class="fas fa-shuttle-van kind-icon"></i>
-          </div>
-          <div class="col-auto pl-0">
-            <h5 class="mb-0">捷運</h5>
-            <small>2019/09/17</small>
-          </div>
-          <div class="col-2 ml-auto text-center">$ 60</div>
-        </div>
-      </div>
-      <div class="col-auto ml-auto">
-        <a href="#">修改</a>
-        <a href="#">刪除</a>
-      </div>
-    </div>
+    </li>
+  {{/each}}
+</ul>
+  
+  {{!--<div class="row">
+    <div class="col-12 col-lg-10 text-center">
+      <a href="/records/new" class="btn btn-primary mt-5">新增支出</a>
+    </div>--}}
   </div>
-</div> 
+</div>
