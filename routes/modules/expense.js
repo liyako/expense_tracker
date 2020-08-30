@@ -14,12 +14,13 @@ router.get('/new', (req, res) => {
 //新增到資料庫
 router.post('/', (req, res) => {
   const userId = req.user._id
-  const { name, date,category, amount } = req.body
+  const { name, date,category, amount,merchant } = req.body
   const expense = new Record({
     name,
     date,
     category,
     amount,
+    merchant,
     userId
   })
   return expense.save()
@@ -55,13 +56,14 @@ router.get('/:id/edit', (req, res) => {
 router.put('/:id', (req, res) => {
   const userId = req.user._id
   const _id = req.params.id
-  const { name, date,category, amount } = req.body
+  const { name, date,category, amount,merchant } = req.body
   return Record.findOne({ _id, userId })
     .then(record => {
       record.name = name
       record.date = date
       record.category = category
       record.amount = amount
+      record.amount = merchant
       return record.save()
     })
     .then(() => res.redirect('/'))

@@ -25,6 +25,7 @@ if(process.env.NODE_ENV !== "production"){
         date: "2020-07-28",
         category: "food",
         amount: "120",
+        merchant:"關山"
     },
     {
         id: 2,
@@ -39,6 +40,7 @@ if(process.env.NODE_ENV !== "production"){
         date: "2020-05-15",
         category: "entertainment",
         amount: "110",
+        merchant:"一拳超人"
     },
     {
         id: 4,
@@ -53,6 +55,7 @@ if(process.env.NODE_ENV !== "production"){
         date: "2020-06-11",
         category: "food",
         amount: "115",
+        merchant:"吉野家",
     },
     {
         id: 6,
@@ -60,6 +63,7 @@ if(process.env.NODE_ENV !== "production"){
         date: "2020-07-26",
         category: "other",
         amount: "10",
+        merchant:"紅十字",
     },
   ]
   
@@ -84,6 +88,7 @@ if(process.env.NODE_ENV !== "production"){
                     date: SEED_RECORD[i + index].date,
                     category: SEED_RECORD[i + index].category,
                     amount: SEED_RECORD[i + index].amount,
+                    merchant: SEED_RECORD[i + index].merchant,
                     userId
                   })
                 )).then(() => resolve())

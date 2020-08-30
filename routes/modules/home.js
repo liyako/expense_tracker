@@ -67,6 +67,7 @@ router.get('/', (req, res) => {
                   category: eachRecord.category,
                   date: eachRecord.date,
                   amount: eachRecord.amount,
+                  merchant:eachRecord.merchant,
                   userId: eachRecord.userId,
                   shortDate: `${yy}-${mm}-${dd}`
               }
