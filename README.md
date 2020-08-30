@@ -8,8 +8,8 @@
 - 刪除清單
 - 搜尋清單(日期語項目)
 # 專案畫面
-![image](https://github.com/liyako/restaurant-_list/blob/master/public/pic1.JPG)
-![image](https://github.com/liyako/restaurant-_list/blob/master/public/pic2.JPG)
+![image](https://github.com/liyako/expense_tracker/blob/master/pic1.JPG)
+![image](https://github.com/liyako/expense_tracker/blob/master/pic2.JPG)
 # 執行步驟
 - 下載專案
 > git clone https://github.com/liyako/expense_tracker
