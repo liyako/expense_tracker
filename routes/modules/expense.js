@@ -4,6 +4,8 @@ const router = express.Router()
 
 const Record  = require('../../models/record')
 
+const {  getSelectList } = require('../../models/category')
+
 
 //新增頁面
 router.get('/new', (req, res) => {
@@ -28,10 +30,25 @@ router.post('/', (req, res) => {
 //資料修改頁面
 router.get('/:id/edit', (req, res) => {
   const userId = req.user._id
-  const _id = req.params._id
+  const _id = req.params.id
   return Record.findOne({ _id, userId })
     .lean()
-    .then(record => res.render('edit', { record }))
+    .then(record => {
+      //顯示使用者使用類型
+      let category = {}
+      if (record.category === 'housing') {
+        category.food = true
+      } else if (record.category === 'transportation') {
+        category.transportation = true
+      } else if (record.category === 'entertainment') {
+        category.entertainment = true
+      } else if (record.category === 'food') {
+        category.food = true
+      } else if (record.category === 'other') {
+        category.other = true
+      }
+      return res.render('edit', { record,category})
+    })
     .catch(error => console.log(error))
 })
 

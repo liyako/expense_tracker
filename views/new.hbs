@@ -6,17 +6,18 @@
   </div>
   <div class="form-group">
     <label for="date">日期</label>
-    <input type="date" class="form-control new-date" id="date" name="date" placeholder="日期" value="2020-05-20"
+    <input type="date" class="form-control new-date" id="date" name="date" placeholder="日期" 
     autocomplete="on" required>
   </div>
   <div class="form-group">
     <label for="category">項目</label>
-    <select class="form-control" name="category" id="category" required>
-        <option value="家居物業">家居物業</option>
-        <option value="交通出行">交通出行</option>
-        <option value="休閒娛樂">休閒娛樂</option>
-        <option value="餐飲食品">餐飲食品</option>
-        <option value="其他">其他</option>
+    <select id="category" class="form-control" name="category" required>
+      <option value="" selected>選擇類別</option>
+      <option value="housing">家居物業</option>
+      <option value="transportation">交通出行</option>
+      <option value="entertainment">休閒娛樂</option>
+      <option value="food">餐飲食品</option>
+      <option value="other">其他</option>
     </select>
   </div>
   <div class="form-group">
@@ -24,11 +25,5 @@
     <input type="text" class="form-control" name="amount" id="amount" placeholder="請填入金額..." required>
   </div>
   <button type="submit" class="btn btn-success">送出表單</button>
-  <a href="/expense/index" class="btn btn-outline-secondary">取消</a>
+  <a href="/" class="btn btn-outline-secondary">取消</a>
 </form>
-
-<script>
-  const dateValue = document.querySelector('.new-date')
-  const now = new Date()
-  dateValue.value = now.toISOString().slice(0, 10)
-</script>

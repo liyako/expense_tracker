@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expense Record</title>
   <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
 </head>
 
 <body class="bg-light">
@@ -22,11 +23,11 @@
       {{/if}}
     </nav>
   </header>
-  <main>
-    <div class="container mt-3">
+  <div class="container mt-3">
       {{{ body }}}
-    </div>
-  </main>
+  </div>
+  <script src="../../public/javascripts/get-current-date.js"></script>
+  <script src="../../public/javascripts/listen-delete-button.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>

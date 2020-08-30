@@ -9,13 +9,7 @@ ehthumbs.db
 Desktop.ini
 
 # npm
-<<<<<<< HEAD
 /node_modules
 *.log
 *.gz
 .env
-=======
-node_modules
-*.log
-*.gz
->>>>>>> [加入]新增頁面與router設定
