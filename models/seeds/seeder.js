@@ -101,7 +101,6 @@ if(process.env.NODE_ENV !== "production"){
         Promise.all([runSeed(SEED_USER[0], 0), runSeed(SEED_USER[1], 3)])
           .then(() => {
           console.log('done')
-          process.exit()
           })
         
       })
