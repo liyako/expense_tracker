@@ -4,7 +4,6 @@ const router = express.Router()
 
 const Record = require('../../models/record')
 
-const { getCategoryIcon, getSelectList } = require('../../models/category')
 //const moment = require("moment")
 
 router.get('/', (req, res) => {

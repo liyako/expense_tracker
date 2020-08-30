@@ -4,7 +4,6 @@ const router = express.Router()
 
 const Record  = require('../../models/record')
 
-const {  getSelectList } = require('../../models/category')
 
 
 //新增頁面
